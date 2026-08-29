@@ -1,48 +1,312 @@
-/* Configuración general */
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    box-sizing: border-box;
+}
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #222222;
-    max-width: 900px;
-    margin: auto;
-    padding: 40px;
+    margin: 0;
+    background-color: #eeeeee;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
 }
 
 
-/* Nombre */
+/* HOJA DEL CV */
+
+.cv {
+    width: 900px;
+    max-width: 95%;
+    margin: 30px auto;
+    background-color: white;
+    padding: 30px 40px;
+}
+
+
+/* ENCABEZADO */
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 150px 250px;
+    gap: 25px;
+    align-items: center;
+
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f45145;
+}
+
+
+/* NOMBRE */
+
+.nombre {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.cuadro {
+    width: 25px;
+    height: 35px;
+    background-color: #34495e;
+    flex-shrink: 0;
+}
 
 h1 {
-    font-size: 42px;
-    margin-bottom: 5px;
+    margin: 0 0 10px 0;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.nombre p {
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 0;
 }
 
 
-/* Subtítulos */
+/* FOTO */
+
+.foto {
+    text-align: center;
+}
+
+.foto img {
+    width: 130px;
+    height: 130px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 4px solid #34495e;
+}
+
+
+/* CONTACTO */
+
+.contacto {
+    text-align: right;
+    font-size: 11px;
+}
+
+.contacto p {
+    margin: 9px 0;
+}
+
+
+/* CONTENIDO */
+
+.contenido {
+    display: grid;
+
+    grid-template-columns: 1.25fr 0.75fr;
+
+    gap: 45px;
+
+    padding-top: 20px;
+}
+
+
+/* TÍTULOS */
 
 h2 {
     font-size: 20px;
-    font-weight: normal;
-    border-bottom: 2px solid #222222;
+    margin: 0 0 20px 0;
+
     padding-bottom: 8px;
-    margin-top: 35px;
+
+    color: #222;
 }
 
 
-/* Texto */
+/* EXPERIENCIA */
 
-p {
-    font-size: 16px;
-    line-height: 1.6;
+.experiencia {
+    position: relative;
+
+    padding-left: 18px;
+    margin-bottom: 25px;
+
+    border-left: 5px solid #f45145;
+}
+
+.fecha {
+    color: #f45145;
+    font-size: 10px;
+    margin-bottom: 3px;
+}
+
+.experiencia h3,
+.educacion h3 {
+    margin: 3px 0;
+
+    font-size: 15px;
+}
+
+.experiencia h4 {
+    margin: 3px 0 10px;
+
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.experiencia h5 {
+    margin: 5px 0;
+
+    color: #f45145;
+    font-size: 10px;
+}
+
+.experiencia p {
+    margin: 0;
+
+    font-size: 11px;
+    line-height: 1.4;
 }
 
 
-/* Lista de habilidades */
+/* EDUCACIÓN */
 
-ul {
-    padding-left: 20px;
+.educacion {
+    border-left: 5px solid #f45145;
+
+    padding-left: 18px;
+
+    margin-bottom: 20px;
 }
 
-li {
-    margin-bottom: 8px;
+.educacion p {
+    margin: 5px 0;
+
+    font-size: 12px;
+}
+
+
+/* HABILIDADES */
+
+.habilidad {
+    display: grid;
+
+    grid-template-columns: 130px 1fr;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 14px;
+
+    font-size: 11px;
+}
+
+.barra {
+    width: 100%;
+    height: 10px;
+
+    background-color: #eeeeee;
+}
+
+.nivel {
+    height: 100%;
+    background-color: #f45145;
+}
+
+
+/* NIVELES */
+
+.html {
+    width: 90%;
+}
+
+.css {
+    width: 80%;
+}
+
+.programacion {
+    width: 75%;
+}
+
+.equipo {
+    width: 90%;
+}
+
+.creatividad {
+    width: 85%;
+}
+
+.pensamiento {
+    width: 80%;
+}
+
+
+/* LOGROS */
+
+.logro {
+    margin-bottom: 15px;
+}
+
+.logro h3 {
+    margin: 0 0 4px;
+
+    font-size: 12px;
+}
+
+.logro p {
+    margin: 0;
+
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+
+/* IDIOMAS */
+
+.idiomas {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 11px;
+}
+
+.idiomas p {
+    margin: 0;
+}
+
+
+/* INTERESES */
+
+.intereses {
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 750px) {
+
+    .cv {
+        padding: 20px;
+    }
+
+    .header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .nombre {
+        justify-content: center;
+        text-align: left;
+    }
+
+    .foto {
+        order: -1;
+    }
+
+    .contacto {
+        text-align: center;
+    }
+
+    .contenido {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 }
