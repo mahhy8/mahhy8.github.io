@@ -1,312 +1,407 @@
-/* CONFIGURACIÓN GENERAL */
-
 * {
     box-sizing: border-box;
 }
-
 body {
     margin: 0;
-    background-color: #eeeeee;
+    background: #111;
     font-family: Arial, Helvetica, sans-serif;
     color: #222;
 }
-
-
-/* HOJA DEL CV */
-
 .cv {
     width: 900px;
-    max-width: 95%;
-    margin: 30px auto;
-    background-color: white;
-    padding: 30px 40px;
+    min-height: 1100px;
+
+    margin: 20px auto;
+
+    padding: 28px 35px;
+
+    background: white;
 }
 
+.encabezado {
 
-/* ENCABEZADO */
+    height: 135px;
 
-.header {
     display: grid;
-    grid-template-columns: 1fr 150px 250px;
-    gap: 25px;
+
+    grid-template-columns: 1fr 145px 230px;
+
     align-items: center;
 
-    padding-bottom: 20px;
-    border-bottom: 2px solid #f45145;
+    gap: 20px;
+
+    border-bottom: 1px solid #f04b43;
 }
 
+.perfil {
 
-/* NOMBRE */
-
-.nombre {
     display: flex;
+
     align-items: flex-start;
+
     gap: 12px;
 }
 
-.cuadro {
+
+.cuadro-azul {
+
     width: 25px;
     height: 35px;
-    background-color: #34495e;
+
+    background: #34495e;
+
     flex-shrink: 0;
 }
 
-h1 {
-    margin: 0 0 10px 0;
-    font-size: 32px;
+
+.texto-perfil h1 {
+
+    margin: -2px 0 8px 0;
+
+    font-size: 30px;
+
     font-weight: normal;
 }
 
-.nombre p {
-    font-size: 12px;
-    line-height: 1.4;
+
+.texto-perfil p {
+
+    width: 280px;
+
     margin: 0;
+
+    font-size: 10px;
+
+    line-height: 1.35;
 }
-
-
-/* FOTO */
 
 .foto {
-    text-align: center;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
 }
 
+
 .foto img {
-    width: 130px;
-    height: 130px;
+
+    width: 95px;
+    height: 95px;
 
     object-fit: cover;
 
     border-radius: 50%;
+
     border: 4px solid #34495e;
 }
-
-
-/* CONTACTO */
-
 .contacto {
+
     text-align: right;
-    font-size: 11px;
+
+    font-size: 9px;
 }
+
 
 .contacto p {
-    margin: 9px 0;
+
+    margin: 10px 0;
 }
 
-
-/* CONTENIDO */
-
 .contenido {
+
     display: grid;
 
     grid-template-columns: 1.25fr 0.75fr;
 
-    gap: 45px;
+    gap: 42px;
 
-    padding-top: 20px;
+    padding-top: 18px;
 }
-
-
-/* TÍTULOS */
 
 h2 {
-    font-size: 20px;
-    margin: 0 0 20px 0;
 
-    padding-bottom: 8px;
+    margin: 0 0 16px 0;
 
-    color: #222;
+    font-size: 17px;
+
+    font-weight: bold;
 }
-
-
-/* EXPERIENCIA */
 
 .experiencia {
-    position: relative;
 
-    padding-left: 18px;
-    margin-bottom: 25px;
+    display: flex;
 
-    border-left: 5px solid #f45145;
+    margin-bottom: 18px;
+
+    min-height: 82px;
 }
+
+
+.barra-roja {
+
+    width: 24px;
+
+    min-width: 24px;
+
+    background: #f04b43;
+
+    margin-right: 10px;
+}
+
+
+.experiencia-contenido {
+
+    width: 100%;
+}
+
+
+.datos {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
 
 .fecha {
-    color: #f45145;
-    font-size: 10px;
-    margin-bottom: 3px;
+
+    color: #f04b43;
+
+    font-size: 8px;
 }
 
-.experiencia h3,
-.educacion h3 {
-    margin: 3px 0;
 
-    font-size: 15px;
+.ubicacion {
+
+    color: #f04b43;
+
+    font-size: 8px;
 }
+
+
+.experiencia h3 {
+
+    margin: 2px 0;
+
+    font-size: 12px;
+}
+
 
 .experiencia h4 {
-    margin: 3px 0 10px;
 
-    font-size: 13px;
+    margin: 0 0 7px 0;
+
+    font-size: 11px;
+
     font-weight: normal;
 }
 
-.experiencia h5 {
-    margin: 5px 0;
 
-    color: #f45145;
-    font-size: 10px;
+.experiencia h5 {
+
+    margin: 0 0 2px 0;
+
+    color: #f04b43;
+
+    font-size: 8px;
 }
+
 
 .experiencia p {
+
     margin: 0;
 
-    font-size: 11px;
-    line-height: 1.4;
+    font-size: 8.5px;
+
+    line-height: 1.25;
 }
-
-
-/* EDUCACIÓN */
 
 .educacion {
-    border-left: 5px solid #f45145;
 
-    padding-left: 18px;
+    display: flex;
 
-    margin-bottom: 20px;
-}
-
-.educacion p {
-    margin: 5px 0;
-
-    font-size: 12px;
-}
-
-
-/* HABILIDADES */
-
-.habilidad {
-    display: grid;
-
-    grid-template-columns: 130px 1fr;
-
-    align-items: center;
-
-    gap: 10px;
-
-    margin-bottom: 14px;
-
-    font-size: 11px;
-}
-
-.barra {
-    width: 100%;
-    height: 10px;
-
-    background-color: #eeeeee;
-}
-
-.nivel {
-    height: 100%;
-    background-color: #f45145;
-}
-
-
-/* NIVELES */
-
-.html {
-    width: 90%;
-}
-
-.css {
-    width: 80%;
-}
-
-.programacion {
-    width: 75%;
-}
-
-.equipo {
-    width: 90%;
-}
-
-.creatividad {
-    width: 85%;
-}
-
-.pensamiento {
-    width: 80%;
-}
-
-
-/* LOGROS */
-
-.logro {
     margin-bottom: 15px;
 }
 
-.logro h3 {
-    margin: 0 0 4px;
+
+.educacion-contenido {
+
+    width: 100%;
+}
+
+
+.educacion h3 {
+
+    margin: 2px 0;
 
     font-size: 12px;
 }
 
-.logro p {
-    margin: 0;
+
+.educacion p {
+
+    margin: 3px 0;
 
     font-size: 10px;
-    line-height: 1.4;
+}
+
+.columna-derecha h2 {
+
+    margin-bottom: 17px;
 }
 
 
-/* IDIOMAS */
+.habilidad {
+
+    display: grid;
+
+    grid-template-columns: 120px 1fr;
+
+    gap: 10px;
+
+    align-items: center;
+
+    margin-bottom: 13px;
+
+    font-size: 8.5px;
+
+    text-align: right;
+}
+
+
+.barra {
+
+    width: 100%;
+
+    height: 10px;
+
+    background: #eeeeee;
+}
+
+
+.nivel {
+
+    height: 100%;
+
+    background: #f04b43;
+}
+
+
+.nivel-90 {
+    width: 90%;
+}
+
+
+.nivel-85 {
+    width: 85%;
+}
+
+
+.nivel-80 {
+    width: 80%;
+}
+
+
+.nivel-75 {
+    width: 75%;
+}
+
+.logro {
+
+    margin-bottom: 13px;
+}
+
+
+.logro h3 {
+
+    margin: 0 0 3px 0;
+
+    font-size: 10px;
+}
+
+
+.logro p {
+
+    margin: 0;
+
+    font-size: 8.5px;
+
+    line-height: 1.3;
+}
 
 .idiomas {
-    display: flex;
-    justify-content: space-between;
 
-    font-size: 11px;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    font-size: 9px;
+
+    margin-bottom: 20px;
 }
+.intereses {
 
-.idiomas p {
+    font-size: 8.5px;
+
+    line-height: 1.7;
+
     margin: 0;
 }
+@media (max-width: 900px) {
 
+    body {
+        background: white;
+    }
 
-/* INTERESES */
+    .cv {
+        width: 100%;
+        margin: 0;
+    }
 
-.intereses {
-    font-size: 11px;
-    line-height: 1.8;
 }
 
 
-/* RESPONSIVE */
+@media (max-width: 700px) {
 
-@media screen and (max-width: 750px) {
+    .encabezado {
 
-    .cv {
-        padding: 20px;
-    }
+        height: auto;
 
-    .header {
         grid-template-columns: 1fr;
+
+        padding-bottom: 20px;
+
         text-align: center;
     }
 
-    .nombre {
+
+    .perfil {
+
         justify-content: center;
+
         text-align: left;
     }
+
 
     .foto {
         order: -1;
     }
 
+
     .contacto {
         text-align: center;
     }
 
+
     .contenido {
+
         grid-template-columns: 1fr;
+
         gap: 30px;
     }
+
 }
